@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kaloryczności</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Kalkulator Kaloryczności</h1>
+
+        <label for="productName">Nazwa produktu:</label>
+        <input type="text" id="productName">
+
+        <label for="weight">Waga produktu (g):</label>
+        <input type="number" id="weight">
+
+        <label for="carbs">Węglowodany na 100g:</label>
+        <input type="number" id="carbs">
+
+        <label for="protein">Białko na 100g:</label>
+        <input type="number" id="protein">
+
+        <label for="fat">Tłuszcze na 100g:</label>
+        <input type="number" id="fat">
+
+        <label for="fiber">Błonnik na 100g:</label>
+        <input type="number" id="fiber">
+
+        <label for="salt">Sól (sód) na 100g:</label>
+        <input type="number" id="salt">
+
+        <button onclick="addToTable()">Dodaj do tabeli</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nazwa produktu</th>
+                    <th>Kaloryczność</th>
+                    <th>Węglowodany</th>
+                    <th>Białko</th>
+                    <th>Tłuszcze</th>
+                    <th>Błonnik</th>
+                    <th>Sól</th>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Łącznie</th>
+                    <th id="totalCalories">0</th>
+                    <th id="sumCarbs">0</th>
+                    <th id="sumProtein">0</th>
+                    <th id="sumFat">0</th>
+                    <th id="sumFiber">0</th>
+                    <th id="sumSalt">0</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
